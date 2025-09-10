@@ -6,43 +6,41 @@ body{
 }
 
 .navbar {
-    background-color: #423051ad;
-    border-bottom: 3px solid #FFD951;
-    padding-bottom: 10px;}
+background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
 
 .card-personalizada{
     background-color: #f9fded;
 }
 
 .btn{
-    background-color: #FFD951;
+    background-color: #fcd034;
     color: #2f3438;
 }
 
 .btn:hover {
-    background-color: #b19b4a;
+    background-color: #ceb457;
     color: #e4f2ff;
 }
 
 .titulo, p.subtitulo {
     font-weight: bold;
-    color: #FFD951;
+    color: #fcd034;
 }
 
 .contenido h2
 {
-    color: #FFD951;
+    color: #fcd034;
     margin-bottom: 20px;
     font-size: 30px;
-    border-bottom: 3px solid #FFD951;
+    border-bottom: 3px solid #fcd034;
     padding-bottom: 10px;
 }
 
 
-footer, footer {
-    background-color: #423051;
-    color: #FFD951;
-    border-top: 3px solid #FFD951;
+footer, footer p{
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
 }
 
 .grid-tarjetas { 
@@ -52,7 +50,7 @@ footer, footer {
 }
 
 .tarjeta {
-    background-color: #272637;
+    background-color: #272637d2;
     border: 2px solid #7e7c9c;
     border-radius: 10px;
     padding: 20px;
@@ -66,7 +64,7 @@ footer, footer {
 }
 
 .tarjeta h3{
-    color: #ACB5F6;
+    color: #c5cbfb;
     margin-bottom: 10px;
     line-height: 1.4;
     font-size: 14px;

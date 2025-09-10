@@ -4,7 +4,7 @@ body {
 }
 
 .navbar {
-    background-color: #3f2a52;
+    background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
 }
 
 .card-personalizada{
@@ -12,8 +12,8 @@ body {
 }
 
 footer, footer p {
-    background-color: #423051;
-    color: #FFD951;
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
 
 }
 
@@ -27,7 +27,7 @@ footer, footer p {
 }
 
 .btn1{
-    background-color: #FFD951;
+    background-color: #fcd034;
     color: #2f3438;
 }
 
