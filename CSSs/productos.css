@@ -1,0 +1,84 @@
+body{
+
+    background: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+                url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background-color: #423051;
+}
+
+.card-personalizada{
+    background-color: #f9fded;
+}
+
+.btn{
+    background-color: #FFD951;
+    color: #2f3438;
+}
+
+.btn:hover {
+    background-color: #b19b4a;
+    color: #e4f2ff;
+}
+
+.titulo, p.subtitulo {
+    font-weight: bold;
+    color: #ACB5F6;
+}
+
+.contenido h2
+{
+    color: #FFD951;
+    margin-bottom: 20px;
+    font-size: 30px;
+    border-bottom: 3px solid #FFD951;
+    padding-bottom: 10px;
+}
+
+
+footer, footer p {
+    background-color: #423051;
+    color: #FFD951;
+
+}
+
+.grid-tarjetas { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.tarjeta {
+    background-color: #272637;
+    border: 2px solid #7e7c9c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+.tarjeta:hover {
+    transform: translateY(-3px);
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta h3{
+    color: #ACB5F6;
+    margin-bottom: 10px;
+    line-height: 1.4;
+    font-size: 14px;
+    margin-top: 10px;
+    font-family: 'Liberation Sans', sans-serif;
+    font-weight: bold;
+}
+
+ .tarjeta img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-height: 250px;
+    margin: 0 auto;
+        }
