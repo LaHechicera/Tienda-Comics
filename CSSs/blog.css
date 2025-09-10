@@ -1,5 +1,7 @@
-body{
-    background-color: #beaedb;
+body {
+    background: linear-gradient(rgba(190, 174, 219, 0.5), rgba(190, 174, 219, 0.5)),
+                url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
 }
 
 .navbar {
@@ -28,7 +30,7 @@ footer{
     color: #3a2d34;
 }
 
-.text1{
+.text{
     font-weight: bold;
     color: #e4f2ff;
     text-shadow: 1px 1px 0 #3a2d34, -1px -1px 0 #3a2d34, 1px -1px 0 #3a2d34, -1px 1px 0 #3a2d34;
