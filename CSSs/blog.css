@@ -11,8 +11,10 @@ body {
     background-color: #edf6fd;
 }
 
-footer{
-    background-color: #3a2d34;
+footer, footer p {
+    background-color: #423051;
+    color: #FFD951;
+
 }
 
 .btn{
@@ -22,6 +24,11 @@ footer{
 .btn:hover{
     background-color: #3a2d34;
     color: #e4f2ff;
+}
+
+.btn1{
+    background-color: #FFD951;
+    color: #2f3438;
 }
 
 .btn1:hover {
