@@ -122,3 +122,32 @@ footer, footer p{
     background-color: #fcd034;     
     border-radius: 4px;
 }
+
+/*  */
+.barra-titulo{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fcd034;
+    border-radius: 9px; 
+    padding:2px 20px;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+/* Botón retroceder */
+.btn-retroceder {
+    background-color: #1b1605;
+    color: #fcd034;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+}
+.btn-retroceder:hover {
+    background-color: #2f2a15;
+    color: #fff7d1;
+}
+

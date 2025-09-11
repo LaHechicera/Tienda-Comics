@@ -87,4 +87,19 @@ footer, footer p{
     display: block;
     max-height: 250px;
     margin: 0 auto;
-        }
+}
+
+.etiqueta-descuento {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    width: 70px;   /* Ajusta tamaño */
+    height: auto;
+    z-index: 5; /* Para que quede encima de la tarjeta */
+}
+
+.etiqueta-descuento img {
+    width: 100%;
+    height: auto;
+}
+
