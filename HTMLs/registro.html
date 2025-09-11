@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
+    <title>Blogs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSSs/producto_venta.css">
+    <link rel="stylesheet" href="/CSSs/registro.css">
 </head>
-<body class="d-flex flex-column min-vh-100"> <!-- clase en doby para ajustar siempre el footer abajo  -->
+<body>
     <!-- Aqui comienza menu con barra collapse -->
      <nav class="navbar navbar-expand-lg navbar-dark">
         <div class="container-fluid">
@@ -32,40 +32,43 @@
     </nav>
     <!-- Termino de cabecera de barra principal -->
 
-    <!-- Producto  -->
-    <main class="flex-grow-1">  <!-- main para ajustar siempre el footer abajo  -->
-    <div class="container my-5">
-    
-        <div class="barra-titulo">
-            <h1>Green Arrow</h1>
-            <a href="/HTMLs/productos.html" class="btn-retroceder">Retroceder</a>
-        </div> 
+    <!-- Aqui comienza grilla -->
+    <div class="container">
 
-    <div class="contenido">
-            
-            <!-- Tarjetas con GRID -->
-            <div class="grid-tarjetas">
-                <div class="tarjeta">
-                    <img src="https://static.dc.com/2025-08/GA_Cv27_02711_DIGITAL.jpg?w=640" alt="portada de green Arrow">
-                    <div class="tarjeta-texto">
-                        <h3 class="fw-bold">LA SAGA DE GREEN ARROW</h3>
-                        <h4>Clasificación:<span class="item">Average 4.7 / 5 out of 43</span></h4>
-                        <h4>Nombre alternativo:<span class="item">dsfsdf</span></h4>
-                        <h4>Autor(es):<span class="item">Joshua Williamson</span></h4>
-                        <h4>Artista(s):<span class="item">Sean Izaakse</span></h4>
-                        <h4>Género:<span class="item">DC Comics</span></h4>
-                        <h4>Tipo:<span class="item">Cómic</span></h4>
-                        <h4>Estado:<span class="item">OnGoing</span></h4>                      
-                        <h5>Oliver Queen lleva perdido desde la Crisis Oscura en Tierras Infinitas, y su familia está decidida a encontrarlo, pero hay fuerzas peligrosas igual de decididas a mantenerlos separados a cualquier precio.</h5>
-                        <h2>27.500 CLP<span class="item2">COMPRAR</span></h2>
-                    </div>
+    <div class="col-lg-4 mx-auto my-4">
+            <div class="card mb-5 mt-5 registro">
+
+            <!-- Inicio Formulario -->
+                <h4 class="fw-bold d-block mx-auto titulo mb-3 mt-3">Crear cuenta</h4>
+
+        <form id="formularioContacto" action="#">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombre</label>
+                <input type="text" class="form-control casillas" placeholder="Ej: Camila" id="nombre">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Apellidos</label>
+                <input type="text" class="form-control casillas" placeholder="Ej: González Zúñiga" id="apellidos">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="">Correo Electronico</label>
+                <input type="email" class="form-control casillas" id="correo" placeholder="correo@dominio.cl">
+            </div>
+            <div class="mb-5">
+                <label for="" class="form-label">Contraseña</label>
+                <input type="text" class="form-control casillas" placeholder="********" id="contrasena">
+            </div>
+            <button class="btn btn-warning d-block mx-auto mt-4 mb-3" onclick="enviarRegistro()"><i class="fa-solid fa-paper-plane"></i>Registrarse</button>
+        </form>
+
                 </div>
-
             </div>
         </div>
-    <!-- Fin de producto -->
+        <!-- Aqui termina grilla Formulario -->
+    </div>
+    <!-- Aqui termina la grilla -->
 </div>
-</main>
+
     <!-- Comienzo de footer -->
     <footer class="text-white text-center py-4 mt-5">
         <button class="btn btn1" onclick="window.location.href='/HTMLs/contacto.html'">Contáctanos</button>
