@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSSs/producto_venta.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> <!-- clase en doby para ajustar siempre el footer abajo  -->
+    <!-- Aqui comienza menu con barra collapse -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="/index.html" class="navbar-brand"><img class="Logo" src="/Imagenes/Logo.png" alt="Logo" width="110" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="menu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/HTMLs/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/HTMLs/blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">Contacto</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="">Inicio Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">Registrate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Termino de cabecera de barra principal -->
+
+    <!-- Producto  -->
+    <main class="flex-grow-1">  <!-- main para ajustar siempre el footer abajo  -->
+    <div class="container my-5">
+    
+    <div class="contenido">
+            <h1>Batman</h1>
+            
+            <!-- Tarjetas con GRID -->
+            <div class="grid-tarjetas">
+                <div class="tarjeta">
+                    <img src="https://i.ebayimg.com/images/g/pUYAAOSwxK5n0kwh/s-l1200.jpg" alt="portada de batman">
+                    <div class="tarjeta-texto">
+                        <h3 class="fw-bold">BATMAN THE DARK KNIGHT</h3>
+                        <h4>Clasificación:<span class="item">Average 4.8 / 5 out of 368</span></h4>
+                        <h4>Nombre alternativo:<span class="item">Batman</span></h4>
+                        <h4>Autor(es):<span class="item">Scott Snyder</span></h4>
+                        <h4>Artista(s):<span class="item">Nick Dragotta</span></h4>
+                        <h4>Género:<span class="item">DC Comics</span></h4>
+                        <h4>Tipo:<span class="item">Cómic</span></h4>
+                        <h4>Estado:<span class="item">OnGoing</span></h4>                      
+                        <h5>LA LEYENDA DE BATMAN SCOTT SNYDER Y EL ICÓNICO ARTISTA NICK DRAGOTTA TRANSFORMAN LA HISTORIA DEL CABALLERO OSCURO PARA LA ERA MODERNA! Sin la mansión… sin el dinero… sin el mayordomo… ¡lo que queda es el Caballero Oscuro!</h5>
+                        <h2>35.200 CLP<span class="item2">COMPRAR</span></h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- Fin de producto -->
+</div>
+</main>
+
+    <!-- Comienzo de footer -->
+    <footer class="text-white text-center py-4 mt-5">
+        <button class="btn btn1">Contáctanos</button>
+        <p>&copy; Todos los derechos reservados😸</p>
+    </footer>
+    <!-- Termino footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+body{
+
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)),
+                url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
+
+.card-personalizada{
+    background-color: #f9fded;
+}
+
+.btn{
+    background-color: #fcd034;
+    color: #2f3438;
+}
+
+.btn:hover {
+    background-color: #ceb457;
+    color: #e4f2ff;
+}
+
+.titulo, p.subtitulo {
+    font-weight: bold;
+    color: #fcd034;
+}
+
+.contenido h1 {
+    color: #473e1e; 
+    font-size: clamp(20px, 4vw, 30px);
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    background-color: #fcd034;     
+    border-radius: 9px;
+
+}
+
+
+footer, footer p{
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
+}
+
+.tarjeta {
+    background-color: #272637d2;
+    border: 2px solid #7e7c9c;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    display: flex;  /* ordena el texto en la derecha */
+    align-items: flex-start; /* alinea arriba (o center si prefieres) */
+    gap: 20px; /* espacio entre imagen y textos */
+    position: relative;
+    min-height: 300px; /* Altura mínima para posicionamiento*/
+}
+
+.tarjeta-texto h3, h5{
+    color: #c5cbfb;
+    margin: 10px;
+    line-height: 1.4;
+    font-size: clamp(16px, 3vw, 20px);
+    margin-top: 10px;
+    font-family: 'Liberation Sans', sans-serif;
+    text-align: left;
+}
+
+.tarjeta-texto h3{
+    border-bottom: 3px solid #7e7c9c;
+}
+
+.tarjeta-texto h4{
+    color: #fcd034;
+    text-align: left;
+    font-weight: bold;
+    font-size: clamp(13px, 2.5vw, 15px);
+    
+}
+
+.tarjeta-texto .item{
+    color: #c5cbfb;
+    font-weight: normal;
+    margin-left: 5px;
+}
+
+.grid-tarjetas { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: clamp(20px, 4vw, 40px);
+}
+ .tarjeta img {
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    display: block;
+    max-height: 400px;
+    margin: left;
+}
+
+.tarjeta-texto h2{
+    color: #dddacf;
+    display: flex;
+    justify-content: space-between;
+    position: absolute;
+    bottom: 0px;
+    right: 60px;
+}
+
+.item2 {
+    color: #fcd034;
+    position: absolute; 
+    bottom: 40px;
+    right: 0px;
+}
+
+.item2:hover{
+    color: #bca039;
+    cursor: default;
+    background-color: #fcd034;     
+    border-radius: 4px;
+}

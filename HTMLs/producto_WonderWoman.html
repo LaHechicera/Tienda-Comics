@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Productos</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSSs/producto_venta.css">
+</head>
+<body class="d-flex flex-column min-vh-100"> <!-- clase en doby para ajustar siempre el footer abajo  -->
+    <!-- Aqui comienza menu con barra collapse -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="/index.html" class="navbar-brand"><img class="Logo" src="/Imagenes/Logo.png" alt="Logo" width="110" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="menu">
+                <ul class="navbar-nav mx-auto">
+                    <li class="nav-item"><a class="nav-link active" href="#">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/HTMLs/productos.html">Productos</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="/HTMLs/blog.html">Blogs</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">Contacto</a></li>
+                </ul>
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="">Inicio Sesión</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="">Registrate</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Termino de cabecera de barra principal -->
+
+    <!-- Producto  -->
+    <main class="flex-grow-1">  <!-- main para ajustar siempre el footer abajo  -->
+    <div class="container my-5">
+    
+    <div class="contenido">
+            <h1>Wonder Woman</h1>
+            
+            <!-- Tarjetas con GRID -->
+            <div class="grid-tarjetas">
+                <div class="tarjeta">
+                    <img src="https://pbs.twimg.com/media/GZT3J8UWYAASuAX?format=jpg&name=4096x4096" alt="portada de Wonder woman">
+                    <div class="tarjeta-texto">
+                        <h3 class="fw-bold">WONDER WOMAN ¡ABSOLUTA!</h3>
+                        <h4>Clasificación:<span class="item">Average 4.8 / 5 out of 74</span></h4>
+                        <h4>Nombre alternativo:<span class="item">Wonder Woman</span></h4>
+                        <h4>Autor(es):<span class="item">Kelly Thompson</span></h4>
+                        <h4>Artista(s):<span class="item">Hayden Sherman</span></h4>
+                        <h4>Género:<span class="item">DC Comics</span></h4>
+                        <h4>Tipo:<span class="item">Cómic</span></h4>
+                        <h4>Estado:<span class="item">OnGoing</span></h4>                      
+                        <h5>¡LA GANADORA DEL PREMIO EISNER KELLY THOMPSON Y EL ARTISTA REVELACIÓN HAYDEN SHERMAN REINVENTARON A WONDER WOMAN DESDE CERO! Sin la isla paradisíaca… sin la hermandad que la formó… sin una misión de paz… ¡lo que queda es Absolute Wonder Woman!</h5>
+                        <h2>30.100 CLP<span class="item2">COMPRAR</span></h2>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    <!-- Fin de producto -->
+</div>
+</main>
+    <!-- Comienzo de footer -->
+    <footer class="text-white text-center py-4 mt-5">
+        <button class="btn btn1">Contáctanos</button>
+        <p>&copy; Todos los derechos reservados😸</p>
+    </footer>
+    <!-- Termino footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+</body>
+</html>
