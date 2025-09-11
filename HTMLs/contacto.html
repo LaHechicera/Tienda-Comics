@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blogs</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="/CSSs/nosotros.css">
+    <link rel="stylesheet" href="/CSSs/contacto.css">
 </head>
 <body>
     <!-- Aqui comienza menu con barra collapse -->
@@ -35,29 +35,36 @@
     <!-- Aqui comienza grilla -->
     <div class="container">
 
-    <!-- Aqui comienzan los blogs -->
-    <div class="row d-flex justify-content-center">
-        <div class="col-12">
-            <div class="card mb-4 mt-5 card-personalizada">
-                <div class="row no-gutters">
-                    <div class="col-md-6">
-                        <img class="card-img" src="/Imagenes/comicss.jpg" alt="Imagen">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="card-lobby d-flex flex-column justify-content-center p-4">
-                            <h5 class="card-title fw-bold">Nosotros</h5>
-                            <p class="card-text parrafo">En nuestra tienda creemos que cada página de cómic es una puerta hacia la grandeza. Somos apasionados guardianes del universo DC, hogar de héroes legendarios como Batman, Superman, Wonder Woman, Flash y muchos más.</p>
-                            <p class="parrafo">Nacimos del amor por las historias que inspiran valentía, justicia y esperanza. Aquí encontrarás cómics coleccionables y todo lo que un verdadero fan necesita para sumergirse en los mundos de Gotham, Metrópolis y más allá.</p>
-                            <p class="parrafo">Nuestra misión es simple: acercar el universo DC a cada persona que sueñe con ser parte de él. Ya sea que seas un lector veterano o estés comenzando tu viaje heroico, aquí encontrarás un lugar donde compartir tu pasión y llevar contigo un pedazo de este legado inmortal.</p>
-                            <p class="fw-bold parrafo">Porque en esta tienda no solo vendemos cómics... compartimos historias que nos hacen creer que cualquiera puede ser un héroe.</p>
-                            <a href="/index.html" class="btn mt-auto">Volver</a>
-                        </div>
-                    </div>
+    <div class="col-lg-6 mx-auto">
+            <div class="card mb-3 contacto">
+
+            <!-- Inicio Formulario -->
+                <h4 class="fw-bold d-block mx-auto titulo">Contáctanos</h4>
+
+        <form id="formularioContacto" action="#">
+            <div class="mb-3">
+                <label for="" class="form-label">Nombres</label>
+                <input type="text" class="form-control casillas" placeholder="Ej: Camila Ignacia" id="nombres">
+            </div>
+            <div class="mb-3">
+                <label for="" class="form-label">Apellidos</label>
+                <input type="text" class="form-control casillas" placeholder="Ej: González Zúñiga" id="apellidos">
+            </div>
+            <div class="mb-3">
+                <label class="form-label" for="">Correo Electronico</label>
+                <input type="email" class="form-control casillas" id="correo" placeholder="correo@dominio.cl">
+            </div>
+            <div class="col-md-12">
+            <label for="" class="form-label">Mensaje</label>
+            <textarea class="form-control casillas" id="mensaje" required placeholder="Aquí su solicitud"></textarea>
+        </div>
+            <button class="btn btn-warning d-block mx-auto mt-4" onclick="enviarFormulario()"><i class="fa-solid fa-paper-plane"></i>Enviar</button>
+        </form>
+
                 </div>
             </div>
         </div>
-    </div>
-        <!-- Aqui terminan los blogs -->
+        <!-- Aqui termina grilla Formulario -->
     </div>
     <!-- Aqui termina la grilla -->
 </div>
