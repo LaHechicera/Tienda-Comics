@@ -1,4 +1,3 @@
-/* Aqui esta la base del CSS para todas las paginas */
 body {
     background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
     background-size: cover;
@@ -8,10 +7,44 @@ body {
     background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
 }
 
+.card-personalizada{
+    background-color: #272637d2;
+    border: 2px solid #7e7c9c;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #cdd3ff;
+
+    margin: 30px auto;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.card-personalizada:hover {
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grid-card { 
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
 footer, footer p {
     background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
     color: #fcd034;
 
+}
+
+.btn{
+    background-color: #75619d;
+    color: #e4f2ff;
+}
+.btn:hover{
+    background-color: #3a2d34;
+    color: #e4f2ff;
 }
 
 .btn1{
@@ -24,58 +57,7 @@ footer, footer p {
     color: #3a2d34;
 }
 
-/* Fin de base de todos los CSS */
-/* Despues de este se pone codigo correspondiente a la pagina especifica HTML */
-
-
-.card-personalizada{
-    background-color: #272637d2;
-    border: 2px solid #7e7c9c;
-    border-radius: 10px;
-    padding: 10px;
-    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    color: #cdd3ff;
-
-    margin: 80px auto;
-
-    display: flex;
-    flex-direction: column;
-    height: auto;
-}
-
-.card-personalizada:hover {
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.3);
-}
-
-.card-lobby {
-    text-align: center;
-}
-
-.grid-card { 
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 20px;
-}
-
-.card-title{
+.text{
+    font-weight: bold;
     color: #fcd034;
-}
-
-.btn{
-    background-color: #fcd034;
-    color: #000000;
-}
-.btn:hover{
-    background-color: #3a2d34;
-    color: #e4f2ff;
-}
-
-/* Aqui no estoy segura */
-.parrafo{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 100%
 }
