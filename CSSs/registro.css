@@ -1,0 +1,47 @@
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+    background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
+
+footer, footer p {
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
+
+}
+
+.btn1{
+    background-color: #fcd034;
+    color: #2f3438;
+}
+
+.btn1:hover {
+    background-color: #d5d5d5;
+    color: #3a2d34;
+}
+
+/* Aqui personaliozado */
+
+.registro{
+    background-color: #272637d2;
+    border: 2px solid #7e7c9c;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #cdd3ff;
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.casillas{
+    background-color: #f9eaff;
+}
+
+.titulo{
+    color: #fcd034;
+}
