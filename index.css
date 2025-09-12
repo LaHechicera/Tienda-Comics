@@ -1,0 +1,155 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.btn{
+    background-color: #fcd034;
+    color: #2f3438;
+}
+
+.btn:hover {
+    background-color: #ceb457;
+    color: #e4f2ff;
+}
+footer, footer p{
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
+}
+
+.main-title, h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-title p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.info-section {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 0 40px;
+    
+}
+.portada-container {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.cards-section {
+    position: relative;
+    height: 300px;
+    margin-bottom: 60px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+
+.card {
+    min-width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 
+        0 2px 4px rgba(0,0,0,0.8),
+        0 4px 8px rgba(0,0,0,0.4),
+        0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 
+        0 2px 4px rgba(0,0,0,0.8),
+        0 4px 8px rgba(0,0,0,0.4),
+        0 6px 12px rgba(0,0,0,0.2);
+}
+
+.tarjeta-portada img {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card1 {
+    background-image: url('https://i.pinimg.com/736x/40/8c/5c/408c5ce2ab153c1df208ffe44a2f0da1.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 {
+    background-image: url('https://www.akiracomics.com/imagenes/poridentidad?identidad=8c292853-11f4-408e-a869-0bda5f2b382d&ancho=850&alto=');
+    background-size: cover;
+    background-position: center;
+}
+
+.card3 {
+    background-image: url('https://imgix-media.wbdndc.net/asset/collection/c5549/3ea7f6d/hero-c.jpg?w=650&h=366&fit=fill&fill=blur&auto=format%2Ccompress&');
+    background-size: cover;
+    background-position: center;
+}
+
+.card4 {
+    background-image: url('https://cdn.wallpapersafari.com/53/68/MomwFJ.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
