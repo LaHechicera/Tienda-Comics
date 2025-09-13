@@ -129,26 +129,26 @@ footer, footer p{
     margin: 0 auto;
 }
 
-.card1 {
-    background-image: url('https://i.pinimg.com/736x/40/8c/5c/408c5ce2ab153c1df208ffe44a2f0da1.jpg');
+.card1 { /* Nosotros */
+    background-image: url('/Imagenes/hero-nosotros.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.card2 {
-    background-image: url('https://www.akiracomics.com/imagenes/poridentidad?identidad=8c292853-11f4-408e-a869-0bda5f2b382d&ancho=850&alto=');
+.card2 { /* Nuestros productos */
+    background-image: url('/Imagenes/comicss.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.card3 {
-    background-image: url('https://imgix-media.wbdndc.net/asset/collection/c5549/3ea7f6d/hero-c.jpg?w=650&h=366&fit=fill&fill=blur&auto=format%2Ccompress&');
+.card3 { /* Blogs */
+    background-image: url('/Imagenes/hero-blog.jpg');
     background-size: cover;
     background-position: center;
 }
 
-.card4 {
-    background-image: url('https://cdn.wallpapersafari.com/53/68/MomwFJ.jpg');
+.card4 { /* Contactanos */
+    background-image: url('/Imagenes/hero-contacto.jpg');
     background-size: cover;
     background-position: center;
 }
