@@ -45,3 +45,14 @@ footer, footer p {
 .titulo{
     color: #fcd034;
 }
+
+.mensaje-flotante {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1050; /* Asegura que esté por encima de otros elementos */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgb(56, 15, 69);
+}
