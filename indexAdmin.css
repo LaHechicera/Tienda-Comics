@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; 
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+.btn{
+    background-color: #fcd034;
+    color: #2f3438;
+}
+
+.btn:hover {
+    background-color: #ceb457;
+    color: #e4f2ff;
+}
+footer, footer p{
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
+}
+
+.main-title, h1 {
+    color: white;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 10px 0;
+}
+
+.main-title p {
+    color: rgba(255,255,255,0.9);
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+.info-section {
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    text-align: center;
+    padding: 0 40px;
+    
+}
+.portada-container {
+    display: flex;
+    flex-direction: column; /* Imagen arriba, texto abajo */
+    align-items: center;
+    gap: 20px; /* Espacio entre imagen y texto */
+}
+
+.cards-section {
+    position: relative;
+    height: 300px;
+    margin-bottom: 60px;
+}
+
+.cards-container {
+    display: flex;
+    gap: 30px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: transform 0.3s ease;
+    cursor: grab;
+}
+
+.card {
+    min-width: 250px;
+    height: 200px;
+    border-radius: 15px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.card-content {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    color: white;
+    z-index: 2;
+    text-shadow: 
+        0 2px 4px rgba(0,0,0,0.8),
+        0 4px 8px rgba(0,0,0,0.4),
+        0 6px 12px rgba(0,0,0,0.2);
+}
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 5px;
+    text-shadow: 
+        0 2px 4px rgba(0,0,0,0.8),
+        0 4px 8px rgba(0,0,0,0.8),
+        0 6px 12px rgba(0,0,0,0.8);
+}
+
+.tarjeta-portada img {
+    width: 600px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.card1 { /* Nosotros */
+    background-image: url('/Imagenes/eliminarusuarios.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+.card2 { /* Nuestros productos */
+    background-image: url('/Imagenes/Batman\ dc\ comics.jpg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 10px;
+    cursor: grab; /* indicador visual de que se puede arrastrar */
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none; /* ocultar barra */
+  }
+  .cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    min-width: 250px;
+    max-width: 320px;
+    height: 220px;
+  }
+
+  .tarjeta-portada img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0 10px;
+  }
+
+  .info-section {
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
