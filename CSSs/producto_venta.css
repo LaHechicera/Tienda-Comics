@@ -50,12 +50,42 @@ footer, footer p{
     border-radius: 10px;
     padding: 20px;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    display: flex;  /* ordena el texto en la derecha */
-    align-items: flex-start; /* alinea arriba (o center si prefieres) */
-    gap: 20px; /* espacio entre imagen y textos */
+
+    display: grid;
+    grid-template-columns: 1fr auto; /* texto a la izquierda, imagen a la derecha */
+    gap: 20px;
+    align-items: start;
     position: relative;
-    min-height: 300px; /* Altura mínima para posicionamiento*/
+}
+/* Imagen alineada a la derecha sin invadir texto */
+.tarjeta img {
+    max-width: 250px;
+    max-height: 400px;
+    object-fit: contain;
+    justify-self: end; /* pega la imagen al lado derecho */
+}
+/* Precio y botón dentro del flujo normal */
+.tarjeta-texto h2 {
+    color: #dddacf;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    position: static; /* quita el absolute */
+}
+
+.item2 {
+    color: #fcd034;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.item2:hover{
+    color: #bca039;
+    cursor: default;
+    background-color: #fcd034;     
+    border-radius: 4px;
 }
 
 .tarjeta-texto h3, h5{
@@ -91,37 +121,6 @@ footer, footer p{
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: clamp(20px, 4vw, 40px);
 }
- .tarjeta img {
-    width: auto;
-    height: auto;
-    object-fit: contain;
-    display: block;
-    max-height: 400px;
-    margin: left;
-}
-
-.tarjeta-texto h2{
-    color: #dddacf;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0px;
-    right: 60px;
-}
-
-.item2 {
-    color: #fcd034;
-    position: absolute; 
-    bottom: 40px;
-    right: 0px;
-}
-
-.item2:hover{
-    color: #bca039;
-    cursor: default;
-    background-color: #fcd034;     
-    border-radius: 4px;
-}
 
 /*  */
 .barra-titulo{
@@ -151,3 +150,24 @@ footer, footer p{
     color: #fff7d1;
 }
 
+/* --- Versión móvil --- */
+@media (max-width: 768px) {
+    .tarjeta {
+        grid-template-columns: 1fr; /* 1 columna: se apila todo */
+        text-align: center;
+    }
+
+    .tarjeta img {
+        justify-self: center; /* centra la imagen */
+    }
+
+    .tarjeta-texto {
+        text-align: center;
+    }
+
+    .tarjeta-texto h2 {
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
