@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="indexAdmin.css">
+    <link rel="shorcut icon" href="Imagenes/Logo.png" type="image/x-icon">
+</head>
+<body>
+     <!-- Aqui comienza menu con barra collapse -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="/index.html" class="navbar-brand"><img class="Logo" src="/Imagenes/Logo.png" alt="Logo" width="110" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Termino de cabecera de barra principal -->
+    <div class="container">
+        <div class="main-title">
+            <h1>Sistema de Administración</h1>
+        </div>
+
+                <!-- Carrusel de tarjetas -->
+        <div class="cards-section">
+            <div class="cards-container" id="cardsContainer">
+                <!-- TARJETA 1-->
+                <div class="card card1" onclick="window.location.href='#'">
+                    <div class="card-content">
+                        <div class="card-title">Usuarios</div>
+                        <div class="card-description">Registra, modifica y elimina usuarios</div>
+                    </div>
+                </div>
+
+                <!-- TARJETA 2-->
+                <div class="card card2" onclick="window.location.href='#'">
+                    <div class="card-content">
+                        <div class="card-title">Productos</div>
+                        <div class="card-description">Registra, modifica y elimina productos</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Imagen de portada centrada -->
+        <section class="tarjeta-portada">
+            <div class="portada-container">
+
+                    
+                <div class="info-section">
+                    <h2>Se el Admin que todos quieren ser ✨❤️</h2>
+                </div>
+                    <img src="./Imagenes/portada.png" alt="portada">
+                
+            </div>
+        </section>
+    </div>
+    <!-- Comienzo de footer -->
+    <footer class="text-white text-center py-4 mt-5">
+        <button class="btn btn1" onclick="window.location.href='/HTMLs/contacto.html'">Contáctanos</button>
+        <p>&copy; Todos los derechos reservados😸</p>
+    </footer>
+    <!-- Termino footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+    <script>
+const container = document.getElementById("cardsContainer");
+let scrollInterval;
+
+if(container) {
+  container.addEventListener("mousemove", (e) => {
+    const rect = container.getBoundingClientRect();
+    const mouseX = e.clientX - rect.left;
+    const width = rect.width;
+
+    clearInterval(scrollInterval); // siempre limpiar el intervalo anterior
+
+    if(mouseX > width * 0.7){ 
+      // lado derecho -> desplazar a la derecha
+      scrollInterval = setInterval(() => {
+        container.scrollLeft += 3;
+        if(container.scrollLeft + container.clientWidth >= container.scrollWidth) {
+          container.scrollLeft = 0; // reinicia al final
+        }
+      }, 20);
+    } else if(mouseX < width * 0.3){
+      // lado izquierdo -> desplazar a la izquierda
+      scrollInterval = setInterval(() => {
+        container.scrollLeft -= 3;
+        if(container.scrollLeft <= 0){
+          container.scrollLeft = container.scrollWidth; // reinicia al inicio
+        }
+      }, 20);
+    }
+    // si está en la zona central, no se desplaza
+  });
+
+  container.addEventListener("mouseleave", () => {
+    clearInterval(scrollInterval); // detener cuando el cursor sale
+  });
+}
+</script>
+
+
+
+ </body>
+</html>

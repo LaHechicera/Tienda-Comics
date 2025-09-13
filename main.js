@@ -62,6 +62,10 @@ function enviarRegistro() {
     const correo = document.querySelector("#correo").value.trim();
     const contra = document.querySelector("#contrasena").value.trim();
 
+     const mensajeFormulario = document.querySelector("#mensaje"); // Asumiendo que este elemento existe en tu HTML
+    const mensajeFlotante = document.querySelector("#mensaje-flotante"); // Asumiendo que este elemento existe en tu HTML
+
+
     if (!correo || !contra || !nombre || !apellidos) {
         if (mensajeFormulario) {
             mensajeFormulario.className = "alert mt-3 alert-danger d-block";
@@ -69,6 +73,14 @@ function enviarRegistro() {
         }
         return;
 
+    }
+
+    if (!esDominioValido) {
+        if (mensajeFormulario) {
+            mensajeFormulario.className = "alert mt-3 alert-warning d-block";
+            mensajeFormulario.innerHTML = '<i class="fa-solid fa-triangle-exclamation"></i> Correo no válido. Solo se aceptan correos @duoc.cl, @profesor.duoc.cl o @gmail.com.';
+        }
+        return;
     }
 
     if (mensajeFlotante) {
