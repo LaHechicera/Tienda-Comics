@@ -157,32 +157,29 @@ footer, footer p{
   .cards-container {
     display: flex;
     gap: 15px;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
+    overflow-x: auto; /* Scroll horizontal */
     padding: 20px 10px;
-    cursor: grab; /* indicador visual de que se puede arrastrar */
-  }
-
-  .cards-container::-webkit-scrollbar {
-    display: none; /* ocultar barra */
-  }
-  .cards-container {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-  }
-
+    position: static; /* Anular absolute del escritorio */
+    transform: none;
+    left: auto;
+    top: auto;
+    justify-content: flex-start;
+    scrollbar-color: rgba(11, 87, 100, 0.874) #00000000; /* barra */
+}
   .card {
-    flex: 0 0 80%;
+    flex: 0 0 90%; /* Cada tarjeta ocupa 80% del ancho */
     scroll-snap-align: center;
     min-width: 250px;
     max-width: 320px;
     height: 220px;
   }
 
+  /* Ajuste de imagen de portada */
   .tarjeta-portada img {
     width: 100%;
+    max-width: 100%;
     height: auto;
-    object-fit: contain;
+    object-fit: contain; /* Evita deformaciones */
     padding: 0 10px;
   }
 
