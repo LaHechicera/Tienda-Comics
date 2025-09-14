@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comic Shop</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="/CSSAdmin/adminUser.css">
+    <link rel="shorcut icon" href="/Imagenes/Logo.png" type="image/x-icon">
+</head>
+<body>
+     <!-- Aqui comienza menu con barra collapse -->
+     <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container-fluid">
+            <a href="/indexAdmin.html" class="navbar-brand"><img class="Logo" src="/Imagenes/Logo.png" alt="Logo" width="110" height="auto"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-between" id="menu">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link active" href="/index.html">Cerrar Sesión</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <h1 class="titulo fw-bold">Administración de Productos</h1>
+
+    <!-- Termino de cabecera de barra principal -->
+    <!-- Comienzo de contenido TABS -->
+    
+
+<div class="col-lg-4 mx-auto my-4">
+
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+        <button class="nav-link active barratabs" id="registro-tab" data-bs-toggle="tab" data-bs-target="#registro" type="button" role="tab" aria-controls="registro" aria-selected="true">Registrar</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="modificar-tab" data-bs-toggle="tab" data-bs-target="#modificar" type="button" role="tab" aria-controls="modificar" aria-selected="false">Modificar</button>
+    </li>
+    <li class="nav-item" role="presentation">
+        <button class="nav-link" id="eliminar-tab" data-bs-toggle="tab" data-bs-target="#eliminar" type="button" role="tab" aria-controls="eliminar" aria-selected="false">Eliminar</button>
+    </li>
+    </ul>
+</div>
+    <!-- Termino de Tabs -->
+
+<div class="col-lg-4 mx-auto my-4">
+    <div class="card mb-5 mt-5 registro">
+    <!-- Comienza contenido dentro de tabs -->
+     <!-- Inicio de registro -->
+    <div class="tab-content" id="myTabContent">
+        <div class="tab-pane fade show active" id="registro" role="tabpanel" aria-labelledby="registro-tab">
+        <div class="container mt-3">
+            <h2>Registro de Usuario</h2>
+            <form>
+                <div class="mb-3 mt-3">
+                    <label for="codigo" class="form-label">Código</label>
+                    <input type="text" class="form-control" 
+                    placeholder="#1234" id="codigo">
+                </div>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" placeholder="Batman #1" id="nombre">
+                </div>
+                <div class="mb-3">
+                    <label for="descripcion" class="form-label">Descripción</label>
+                    <input type="text" class="form-control" placeholder="Resumen Producto" id="descripcion">
+                </div>
+                <div class="mb-3">
+                    <label for="precio" class="form-label">Precio</label>
+                    <input type="text" class="form-control" placeholder="$12.000" id="precio">
+                </div>
+                <div class="mb-3">
+                    <label for="stock" class="form-label">Stock</label>
+                    <input type="text" class="form-control" placeholder="12" id="stock">
+                </div>
+                <div class="mb-3">
+                    <label for="categoria" class="form-label">Categoría</label>
+                    <input type="text" class="form-control" placeholder="Adolescentes +16" id="categoria">
+                </div>
+                <div class="mb-3">
+                    <label for="imagen" class="form-label">Imagen</label>
+                    <input type="file" class="form-control" id="imagen" name="imagen" accept="image/*">
+                </div>
+                <button type="submit" class="btn btn-primary mb-3 mt-3">Guardar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Termino registro -->
+
+    <!-- Inicio modificar -->
+    <div class="tab-pane fade" id="modificar" role="tabpanel" aria-labelledby="modificar-tab">
+        <div class="container">
+            <h2>Modificación datos de productos</h2>
+            <table class="table table-bordered table-dark mt-4 mb-3">
+                <thead>
+                    <tr>
+                        <th>Código</th>
+                        <th>Nombre</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>#1234</td>
+                        <td>Batgirl Vol. 1 (2024)</td>
+                        <td><button class="btn btn-warning">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#1593</td>
+                        <td>Superman #35 (2017)</td>
+                        <td><button class="btn btn-warning">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#0563</td>
+                        <td>Batman "La muerte en la familia" New 52 2017</td>
+                        <td><button class="btn btn-warning">Editar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#2345</td>
+                        <td>Batman: The Killing Joke (2008)</td>
+                        <td><button class="btn btn-warning">Editar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Termino modificar -->
+
+    <!-- Inicio eliminar -->
+    <div class="tab-pane fade" id="eliminar" role="tabpanel" aria-labelledby="eliminar-tab">
+        <div class="container mt-3">
+            <h2>Eliminar productos</h2>
+            <table class="table table-bordered table-dark mt-4 mb-3">
+                <thead>
+                    <tr>
+                        <td>#1234</td>
+                        <td>Batgirl Vol. 1 (2024)</td>
+                        <td><button class="btn btn-warning">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#1593</td>
+                        <td>Superman #35 (2017)</td>
+                        <td><button class="btn btn-warning">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#0563</td>
+                        <td>Batman "La muerte en la familia" New 52 2017</td>
+                        <td><button class="btn btn-warning">Eliminar</button></td>
+                    </tr>
+                    <tr>
+                        <td>#2345</td>
+                        <td>Batman: The Killing Joke (2008)</td>
+                        <td><button class="btn btn-warning">Eliminar</button></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- Termino eliminar -->
+    </div>
+    </div>
+</div>
+
+
+
+    <!-- Comienzo de footer -->
+    <footer class="text-white text-center py-4 mt-5">
+        <button class="btn btn1" onclick="window.location.href='/HTMLs/contacto.html'">Contáctanos</button>
+        <p>&copy; Todos los derechos reservados😸</p>
+    </footer>
+    <!-- Termino footer -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+ </body>
+</html>

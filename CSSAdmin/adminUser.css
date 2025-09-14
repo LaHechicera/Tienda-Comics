@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url('/Imagenes/dcComics.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+.navbar {
+background: linear-gradient(to bottom, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 0.6), transparent);
+}
+
+.navbar-nav {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%; 
+}
+
+.btn{
+    background-color: #fcd034;
+    color: #2f3438;
+}
+
+.btn:hover {
+    background-color: #ceb457;
+    color: #e4f2ff;
+}
+
+footer, footer p{
+    background: linear-gradient(to top, rgba(66, 48, 81, 1.0), rgba(66, 48, 81, 1.0), transparent);
+    color: #fcd034;
+}
+
+.registro{
+    background-color: #272637d2;
+    border: 2px solid #7e7c9c;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    color: #cdd3ff;
+
+    display: flex;
+    flex-direction: column;
+    height: auto;
+}
+
+.titulo{
+    color: #fcd034;
+    text-align: center;
+}
+
+.nav-link:not(.active) {
+  color: #ffdddd; /* Color de ejemplo: un gris claro */
+}
+
+
+
+
+@media (max-width: 768px) {
+  .cards-container {
+    display: flex;
+    gap: 15px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px 10px;
+    cursor: grab; /* indicador visual de que se puede arrastrar */
+  }
+
+  .cards-container::-webkit-scrollbar {
+    display: none; /* ocultar barra */
+  }
+  .cards-container {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .card {
+    flex: 0 0 80%;
+    scroll-snap-align: center;
+    min-width: 250px;
+    max-width: 320px;
+    height: 220px;
+  }
+
+  .tarjeta-portada img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    padding: 0 10px;
+  }
+
+  .info-section {
+    padding: 10px 20px;
+    text-align: center;
+  }
+}
