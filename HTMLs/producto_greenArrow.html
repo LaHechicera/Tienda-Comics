@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link rel="stylesheet" href="/CSSs/producto_venta.css">
     <link rel="shortcut icon" href="/Imagenes/Logo.png" type="image/x-icon">
 </head>
@@ -27,10 +28,37 @@
                 <ul class="navbar-nav">
                     <li class="nav-item"><a class="nav-link active" href="/HTMLs/inicioSesion.html">Inicio Sesión</a></li>
                     <li class="nav-item"><a class="nav-link active" href="/HTMLs/registro.html">Registrate</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#" data-bs-toggle="offcanvas" data-bs-target="#miniCarrito"><i class="bi bi-cart-fill"></i></a></li>
                 </ul>
             </div>
         </div>
     </nav>
+
+    <!--Mini Carrito -->
+    <div class="offcanvas offcanvas-end carrito" tabindex="-1" id="miniCarrito">
+        <div class="offcanvas-header">
+            <h5 class="offcanvas-title">Tu Carrito</h5>
+            <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas"></button>
+        </div>
+        <div class="offcanvas-body">
+        <!-- Tabla del carrito -->
+            <table class="table table-dark table-striped table-sm">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio</th>
+                    </tr>
+                </thead>
+                <tbody id="carrito-body"></tbody>
+            </table>
+
+            <!-- Botón comprar -->
+            <div class="d-grid">
+                <button class="btn btn-carrito mt-3">Comprar</button>
+            </div>
+        </div>
+    </div>
     <!-- Termino de cabecera de barra principal -->
 
     <!-- Producto  -->
@@ -58,11 +86,18 @@
                         <h4>Tipo:<span class="item">Cómic</span></h4>
                         <h4>Estado:<span class="item">OnGoing</span></h4>                      
                         <h5>Oliver Queen lleva perdido desde la Crisis Oscura en Tierras Infinitas, y su familia está decidida a encontrarlo, pero hay fuerzas peligrosas igual de decididas a mantenerlos separados a cualquier precio.</h5>
-                        <h2>27.500 CLP<span class="item2">COMPRAR</span></h2>
+                        <h2>
+                            27.500 CLP 
+                            <button 
+                                class="btn btn-carrito-agregar" 
+                                data-nombre="LA SAGA DE GREEN ARROW" 
+                                data-precio="27500">COMPRAR
+                            </button>
+                        </h2>
                     </div>
                 </div>
-
             </div>
+            <div id="mensaje-alerta" class="alert alert-success text-center d-none" role="alert">Producto seleccionado</div>
         </div>
     <!-- Fin de producto -->
 </div>
@@ -74,5 +109,6 @@
     </footer>
     <!-- Termino footer -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <script src="/main.js"></script>
 </body>
 </html>
