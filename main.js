@@ -97,3 +97,63 @@ function enviarRegistro() {
         }, 1000); 
     }
 }
+
+
+// Lógica para agregar productos al carrito
+
+document.addEventListener("DOMContentLoaded", function () {
+    const botonesCompra = document.querySelectorAll(".btn-carrito-agregar");
+    const cuerpoTabla = document.querySelector("#carrito-body");
+    const mensajeAlerta = document.querySelector("#mensaje-alerta");
+
+    // Función para actualizar la tabla del carrito desde localStorage
+    function actualizarTabla() {
+        cuerpoTabla.innerHTML = "";
+        let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+        carrito.forEach(item => {
+            const fila = document.createElement("tr");
+            fila.innerHTML = `
+                <td>${item.nombre}</td>
+                <td>${item.cantidad}</td>
+                <td>$${item.precio.toLocaleString("es-CL")}</td>
+            `;
+            cuerpoTabla.appendChild(fila);
+        });
+    }
+
+    // Cargar carrito al iniciar la página
+    actualizarTabla();
+
+    botonesCompra.forEach(boton => {
+        boton.addEventListener("click", function () {
+            const nombre = this.getAttribute("data-nombre");
+            const precio = parseInt(this.getAttribute("data-precio"), 10);
+
+            // Obtener carrito del localStorage
+            let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
+
+            // Revisar si el producto ya está en el carrito
+            let productoExistente = carrito.find(item => item.nombre === nombre);
+
+            if (productoExistente) {
+                productoExistente.cantidad += 1;
+            } else {
+                // Si no existe, agregar nuevo producto
+                carrito.push({ nombre, precio, cantidad: 1 });
+            }
+
+            // Guardar carrito actualizado en localStorage
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+
+            actualizarTabla();
+
+            mensajeAlerta.classList.remove("d-none");
+            mensajeAlerta.textContent = "Producto seleccionado";
+
+            setTimeout(() => {
+                mensajeAlerta.classList.add("d-none");
+            }, 2000);
+        });
+    });
+});

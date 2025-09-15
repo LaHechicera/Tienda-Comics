@@ -171,3 +171,21 @@ footer, footer p{
         gap: 10px;
     }
 }
+
+/* Mini carrito */
+.offcanvas.carrito {
+  background-color: #272637; 
+  color: #fcd034;
+  width: 320px; /* Ancho de la barra carrito */
+}
+
+.offcanvas.carrito .offcanvas-header {
+  border-bottom: 2px solid #fcd034;
+}
+
+#carrito-body{
+  text-align: center; 
+  vertical-align: top;
+  width: 80px; 
+}
+
