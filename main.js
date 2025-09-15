@@ -157,3 +157,40 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 });
+
+function enviarFormulario(event) {
+    event.preventDefault(); // This is essential to stop the page from reloading.
+
+    const nombres = document.querySelector("#nombres").value.trim();
+    const apellidos = document.querySelector("#apellidos").value.trim();
+    const correo = document.querySelector("#correo").value.trim();
+    const mensaje = document.querySelector("#mensaje").value.trim();
+
+    const mensajeContacto = document.createElement("div"); // We create a new element for the message.
+    mensajeContacto.classList.add("alert", "mt-3"); // Add Bootstrap classes for styling.
+
+    if (!nombres || !apellidos || !correo || !mensaje) {
+        mensajeContacto.classList.add("alert-danger");
+        mensajeContacto.textContent = "Por favor, completa todos los campos.";
+    } else {
+        mensajeContacto.classList.add("alert-success");
+        mensajeContacto.textContent = "Envio exitoso, nos contactaremos en brevedad con usted.";
+        // You could also clear the form here if you'd like
+        document.querySelector("#formularioContacto").reset();
+    }
+    
+    // Insert the message after the form.
+    const formContainer = document.querySelector(".card.contacto");
+    formContainer.appendChild(mensajeContacto);
+
+    // Optional: Hide the message after a few seconds
+    setTimeout(() => {
+        mensajeContacto.remove();
+    }, 5000);
+}
+
+// Add an event listener to the form to call the function
+const formContacto = document.querySelector("#formularioContacto");
+if (formContacto) {
+    formContacto.addEventListener("submit", enviarFormulario);
+}
